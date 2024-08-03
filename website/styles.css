@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    border: 5px solid #fff;
+    border-radius: 15px; /* Added rounded corners to the border */
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+header img {
+    width: 100%;
+    max-width: 500px; /* Adjust as needed */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background: rgba(255, 255, 255, 0.8); /* Background color */
+    padding: 8px; /* Padding around image */
+    margin-top: 10px; /* Margin to move the image up */
+}
+
+header::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0; /* Removed height to eliminate white bar */
+    background: transparent; /* Ensure background is transparent */
+    position: absolute;
+    top: -10px; /* Adjust to align with image */
+    left: 0;
+    z-index: -1;
+}
+
+h1 {
+    color: #fff;
+    margin: 15px 0;
+}
+
+form {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #5151E5;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #4141d5;
+}
+
+audio {
+    margin-top: 15px;
+}
+
+#download-link {
+    display: none;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #5151E5;
+    font-weight: bold;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
